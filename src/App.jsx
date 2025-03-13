@@ -1,13 +1,13 @@
-// src/App.jsx
-
-import React from 'react';
-import Home from './Home';
-import './App.css'; // Import global styles
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
   return (
-    <div className="App">
-      <Home />
+    <div>
+      <h1>Book Library</h1>
+      <button onClick={() => navigate("/add-book")}>Add Book</button>
+      {/* Book list rendering here */}
     </div>
   );
 }
